@@ -1,3 +1,1 @@
-# HTML/CSS
-
-HTML/CSS 연습
+# 멋쟁이사자처럼-FrontEndSchool-5
