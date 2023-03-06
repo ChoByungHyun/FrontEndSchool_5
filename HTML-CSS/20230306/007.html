@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card</title>
+    <style>
+      .card {
+        display: flex;
+        padding-bottom: 50%;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        width: 350px;
+        height: 200px;
+        border-radius: 8px;
+      }
+      .img_card {
+        display: flex;
+        height: 100%;
+
+        background: #ffffff;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        vertical-align: top;
+        /* box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2); */
+      }
+      .header {
+        height: 50px;
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      .content {
+        margin-top: 30px;
+
+        /* overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+             */
+      }
+      .footer {
+        margin-top: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img class="img_card" src="img_card/thumbnail.png" alt="" />
+      <div class="header">그것을 피가 청춘을 것이다</div>
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis optio
+        esse laudantium rerum possimus quaerat eligendi illum sequi, alias
+        expedita error aliquam dolore! Vitae, reiciendis fugit? Necessitatibus
+        dolore animi excepturi.
+      </div>
+      <div class="footer">Read.</div>
+    </div>
+  </body>
+</html>
