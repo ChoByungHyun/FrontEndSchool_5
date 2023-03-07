@@ -1,79 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>box</title>
     <style>
-        div{
+        div {
             width: 100px;
             height: 48px;
-            line-height: 48px;
+            line-height: 38px;
             text-align: center;
-            background: #eee;
             box-sizing: border-box;
+
         }
-        .box1{
+
+        /* div:not(:first-child) {
+      margin-top: 20px;
+    } */
+        div~div {
+            margin-top: 20px;
+        }
+
+        .box1 {
             color: #fff;
-            background: #343f50;    
+            background: #343f50;
             box-shadow: inset 5px 5px #4a5568;
             border: 5px solid #000;
-            
         }
-        .box11{
+
+
+        .box11 {
             color: #fff;
-            background: #343f50;    
+            background: #343f50;
             border: 5px solid #4a5568;
             border-width: 5px 0 0 5px;
-            outline: 5px solid#000;
-
+            /* 포커스가 감춰져 사용자가 길을 잃을 수 있음 사용 주의! */
+            outline: 5px solid #000;
         }
 
-        .box2{
+        .box11:focus {
+            /* 아웃라인을 사용한다면 focus 된 상태까지 고려할것 */
+            outline-color: royalblue;
+        }
+
+        /*  background-clip */
+        .box2 {
             color: #fff;
-            background: linear-gradient(180deg,rgba(34,193,195,1));
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             border: 5px dashed rgb(134, 17, 136);
             background-clip: padding-box;
-            border-radius: 24px;
         }
-        .box22{
+
+        /* 가상요소 + position 을 이용해서 푸는 방법 */
+        .box22 {
             color: #fff;
             border-radius: 24px;
             border: 5px dashed rgb(134, 17, 136);
+            position: relative;
+            overflow: hidden;
         }
-        .box22::before{
-            content: "";
+
+        .box22::before {
+            content: '';
             display: block;
             width: 100%;
             height: 100%;
+            background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
         }
-        .box3{
+
+        .box3 {
             border: 5px solid #ddd;
             border-radius: 0 24px 24px 24px;
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
         }
-
-        div~div{
-            margin-top: 20px;
-        }
-
     </style>
 </head>
+
 <body>
-
-      <!-- <button class="box1">Hello🖐️</button>
-      <button class="box11">Hello🖐️</button> -->
-
-      <div class="box1">Hello🖐️</div>
-      <div class="box11">Hello🖐️</div>
-      <div class="box2">Hello🖐️</div>
-      <div class="box22">Hello🖐️</div>
-      <div class="box3">Hello🖐️</div>
-
+    <div class="box3">Hello✋</div>
+    <!-- <button class="box1">Hello✋</button>
+  <button class="box11">Hello✋</button> -->
+    <div class="box1">Hello✋</div>
+    <div class="box11">Hello✋</div>
+    <div class="box2">Hello✋</div>
+    <div class="box22">Hello✋</div>
 </body>
+
 </html>
