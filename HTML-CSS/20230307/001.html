@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout_float</title>
+    <style>
+      div {
+        background: pink;
+        width: 700px;
+        height: 700px;
+      }
+      header {
+        background: red;
+        margin: 5px;
+        margin-top: 5px;
+        height: 25%;
+      }
+      section {
+        background: gray;
+        height: 200px;
+        float: left;
+        margin-left: 5px;
+        width: 70%;
+        height: 50%;
+        border-right: 5px solid pink;
+        box-sizing: border-box;
+      }
+      aside {
+        margin: 5px;
+        background: royalblue;
+        height: 50%;
+        margin-left: 20px;
+      }
+      footer {
+        margin: 5px;
+        background: green;
+        height: 23%;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
