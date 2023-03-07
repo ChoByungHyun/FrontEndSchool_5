@@ -4,68 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login-Page</title>
+    <title></title>
     <style>
-      .wrap {
-        border: 1px solid black;
-        width: 400px;
-        height: 150px;
+      header {
+        background: skyblue;
+        height: 100px;
+        margin-bottom: 20px;
       }
-      .head {
-        margin: 10px;
-      }
-      .btn {
-        background: purple;
-        width: 95%;
-        color: white;
-        margin-left: 10px;
-        border-radius: 8px;
-      }
-      .btn,
-      .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
-      }
-      .find {
+
+      section {
+        background: slateblue;
         float: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
+        /* display: inline-block; */
+        /* border-right: 1px solid slateblue;
+      width: 70%; */
+
+        width: calc(70% - 20px);
+        /*
+        width: 70%;
+        border-right: 20px solid #fff;
+        box-sizing: border-box; 
+      */
+        height: 400px;
       }
-      .signup {
+
+      aside {
+        background: lime;
+        height: 200px;
         float: right;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
+        width: 30%;
       }
-      .find,
-      .signup {
-        margin-top: 15px;
+
+      footer {
+        background: salmon;
+        height: 100px;
+        clear: both;
+        margin-top: 20px;
+      }
+
+      .clear-fix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      @media (max-width: 640px) {
+        section,
+        aside {
+          float: none;
+          width: 100%;
+        }
+
+        aside {
+          margin-top: 20px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="wrap">
-      <div class="head">더 편리해진 위니브에 오신걸 환영합니다.</div>
-      <div class="btn">
-        <img src="img/weniv-logo.png" alt="weniv" />
-        <p class="content">로그인</p>
-      </div>
-      <div class="find">
-        <img src="img/icon-lock.png" alt="" />
-        아이디 | 비밀번호 찾기
-      </div>
-      <div class="signup">
-        <img src="img/icon-user.png" alt="" />
-        회원가입
-      </div>
+    <header>header</header>
+
+    <div class="clear-fix">
+      <section>section</section>
+      <aside>aside</aside>
     </div>
+    <footer>footer</footer>
   </body>
 </html>
