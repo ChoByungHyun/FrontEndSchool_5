@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        background: #eee;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr 2fr;
+
+        gap: 10px;
+        width: 500px;
+        height: 500px;
+      }
+      .item {
+        width: auto;
+      }
+      .a {
+        background: red;
+        grid-area: 1/1/1 / span 2;
+      }
+      .b {
+        background: yellow;
+        grid-area: 1/3 / span 2/3;
+      }
+      .c {
+        background: gray;
+        grid-area: 2/1/3/2;
+      }
+      .d {
+        background: green;
+        grid-area: 2/2/3/3;
+      }
+      .e {
+        background: orange;
+        grid-area: 3/1/3/2;
+      }
+      .f {
+        background: plum;
+        grid-area: 3/2/4/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item a">a</div>
+      <div class="item b">b</div>
+      <div class="item c">c</div>
+      <div class="item d">d</div>
+      <div class="item e">e</div>
+      <div class="item f">f</div>
+    </div>
+  </body>
+</html>

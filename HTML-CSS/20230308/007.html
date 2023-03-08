@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .flex-container {
+        display: flex;
+        background: yellow;
+        width: 700px;
+        height: 700px;
+        flex-direction: column;
+      }
+
+      .middle {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      header {
+        background: skyblue;
+        height: 25%;
+      }
+
+      section {
+        background: slateblue;
+        width: 50%;
+      }
+
+      aside {
+        background: lime;
+        width: 50%;
+      }
+
+      footer {
+        background: salmon;
+        height: 25%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <header class="head">header</header>
+      <div class="middle">
+        <section class="sect">section</section>
+        <aside class="asid">aside</aside>
+      </div>
+      <footer class="foot">footer</footer>
+    </div>
+  </body>
+</html>
