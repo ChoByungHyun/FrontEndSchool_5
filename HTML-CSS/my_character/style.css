@@ -1,0 +1,196 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #313654;
+}
+
+.pig {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pig .ear {
+  position: absolute;
+  top: 0;
+  border: 10px solid #000;
+  background: #f8b196;
+
+  height: 320px;
+  width: 120px;
+  border-radius: 35px;
+}
+
+.pig .ear.left {
+  left: 54px;
+  transform: rotate(-10deg);
+}
+
+.pig .ear.right {
+  right: 54px;
+  transform: rotate(10deg);
+}
+
+.pig .face {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 367px;
+  border-radius: 100%;
+  border: 10px solid #000;
+  background: #f8b196;
+}
+
+.pig .eyebrow {
+  position: absolute;
+  top: 106px;
+  width: 78px;
+  height: 14px;
+  border-radius: 14px;
+  background: #000;
+}
+
+.pig .eyebrow.left {
+  left: 68px;
+  transform: rotate(20deg);
+}
+
+.pig .eyebrow.right {
+  right: 68px;
+  transform: rotate(-20deg);
+}
+
+.pig .eye {
+  position: absolute;
+  height: 56px;
+  width: 31px;
+  top: 147px;
+  border-radius: 100%;
+
+  background: #000;
+}
+
+.pig .eye.left {
+  left: 98px;
+}
+
+.pig .eye.right {
+  right: 98px;
+}
+
+.pig .nose {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 167px;
+  height: 102px;
+  border-radius: 100%;
+  background: #f8b196;
+  border: 8px solid #000000;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.pig .nose.left {
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  top: 245px;
+  left: 150px;
+  border-radius: 100%;
+
+  background: #000;
+  z-index: 2;
+}
+.pig .nose.right {
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  top: 245px;
+  left: 230px;
+  border-radius: 100%;
+
+  background: #000;
+  z-index: 2;
+}
+.hamburger_wrapper {
+  margin: 50px auto;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  /* transform: translate(10%, 5%); */
+}
+.topbread {
+  position: absolute;
+  width: 188px;
+  height: 46px;
+  left: 9px;
+  top: 175px;
+
+  background: #fe860a;
+  border-radius: 150px 150px 0 0;
+}
+
+.btmbread {
+  position: absolute;
+  width: 188px;
+  height: 30px;
+  left: 9px;
+  top: 299px;
+
+  background: #fe860a;
+  border-radius: 24px;
+}
+
+.meat.topmeat {
+  position: absolute;
+  width: 207px;
+  height: 39px;
+
+  top: 221px;
+
+  background: #9e5528;
+  border-radius: 24px;
+}
+.meat.btmmeat {
+  position: absolute;
+  width: 207px;
+  height: 39px;
+
+  top: 255px;
+
+  background: #9e5528;
+  border-radius: 24px;
+}
+.cheese.topcheese {
+  position: absolute;
+  width: 200px;
+  height: 8px;
+
+  top: 250px;
+
+  background: #fee45a;
+  border-radius: 24px;
+}
+.cheese.btmcheese {
+  position: absolute;
+  width: 200px;
+  height: 8px;
+
+  top: 292px;
+
+  background: #fee45a;
+  border-radius: 24px;
+}
