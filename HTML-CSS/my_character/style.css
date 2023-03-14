@@ -21,23 +21,27 @@ body {
 
 .pig .ear {
   position: absolute;
-  top: 0;
-  border: 10px solid #000;
-  background: #f8b196;
 
-  height: 320px;
-  width: 120px;
-  border-radius: 35px;
+  border: 10px solid #000;
+  background: #d18a6e;
+
+  top: 20px;
+
+  height: 110px;
+  width: 130px;
+
+  border-radius: 0 0 150px 150px;
+  z-index: 2;
 }
 
 .pig .ear.left {
-  left: 54px;
-  transform: rotate(-10deg);
+  left: 24px;
+  transform: rotate(-30deg);
 }
 
 .pig .ear.right {
-  right: 54px;
-  transform: rotate(10deg);
+  right: 24px;
+  transform: rotate(30deg);
 }
 
 .pig .face {
@@ -61,17 +65,17 @@ body {
 
 .pig .eyebrow.left {
   left: 68px;
-  transform: rotate(20deg);
+  transform: rotate(10deg);
 }
 
 .pig .eyebrow.right {
   right: 68px;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
 }
 
 .pig .eye {
   position: absolute;
-  height: 56px;
+  height: 52px;
   width: 31px;
   top: 147px;
   border-radius: 100%;
@@ -94,7 +98,7 @@ body {
   width: 167px;
   height: 102px;
   border-radius: 100%;
-  background: #f8b196;
+  background: #d18a6e;
   border: 8px solid #000000;
   position: absolute;
   top: 70%;
@@ -104,18 +108,17 @@ body {
 }
 .pig .nose.left {
   position: absolute;
-  height: 50px;
+  height: 30px;
   width: 30px;
   top: 245px;
   left: 150px;
   border-radius: 100%;
-
   background: #000;
   z-index: 2;
 }
 .pig .nose.right {
   position: absolute;
-  height: 50px;
+  height: 30px;
   width: 30px;
   top: 245px;
   left: 230px;
