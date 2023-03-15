@@ -3,6 +3,16 @@ body {
   margin: 0;
   background: #fffaf0;
 }
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
 
 /* a-button  */
 .btn-join,
@@ -58,6 +68,7 @@ body {
   transition: all 0.2s;
   border-radius: 4px 4px 0 0;
   padding: 0 16px;
+  font-size: 16px;
 }
 
 .input-style:hover {
@@ -97,3 +108,30 @@ header {
 /* header .btn-join {
   float: right;
 } */
+
+.hello {
+  display: inline-block;
+}
+.hello strong {
+  box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.2);
+}
+
+@media (min-width: 541px) {
+  .hello::after {
+    content: "|";
+    color: #d8ddde;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* .header-wrap > div {
+    display: flex;
+    flex-direction: column;
+  } */
+  .hello {
+    position: absolute;
+    top: 140px;
+    right: 34px;
+  }
+}
