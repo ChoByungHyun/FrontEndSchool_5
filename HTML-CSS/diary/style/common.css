@@ -52,7 +52,9 @@ body {
 .black-btn:disabled {
   opacity: 0.2;
 }
-
+button {
+  border: 0;
+}
 /* form */
 .label-style,
 .input-style {
