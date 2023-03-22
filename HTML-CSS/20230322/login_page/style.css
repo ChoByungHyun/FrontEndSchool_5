@@ -1,0 +1,56 @@
+body,
+div,
+input,
+a {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.wrapper {
+  width: 520px;
+  /* height: 736px; */
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  outline: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+.header {
+  /* display: block; */
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 18px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+}
+.form-title {
+  margin-bottom: 26px;
+}
+.input-id,
+.input-pw {
+  width: 472px;
+  height: 50px;
+  outline: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.input-pw {
+}
+.chbox-login {
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.btn-group a {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  width: 472px;
+}
