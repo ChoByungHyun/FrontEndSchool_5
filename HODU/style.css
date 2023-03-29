@@ -1,0 +1,76 @@
+:root {
+  font-family: "Spoqa Han Sans Neo";
+}
+body,
+h1,
+h2,
+ul,
+li,
+img,
+p,
+form,
+input,
+button,
+nav {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+}
+body {
+  /* width: 1920px; */
+}
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2e9d8;
+
+  box-sizing: border-box;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.header {
+  width: 1920px;
+  display: flex;
+  margin: 26px auto;
+  justify-content: space-between;
+}
+.section1 {
+  width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.img-section1 {
+  width: 415px;
+  height: 890px;
+}
+.section1-content,
+.section2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 128px;
+  /* align-items: center; */
+}
+.section1-content h2,
+.section2-content h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.section1-content p {
+}
+.section2 {
+  background-color: white;
+  display: flex;
+  margin: 0 auto;
+}
