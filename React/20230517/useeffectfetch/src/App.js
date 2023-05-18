@@ -1,4 +1,5 @@
-import NationList from "./conponents/NationList";
+import NationList from "./components/NationList";
+
 function App() {
   return (
     <div>
