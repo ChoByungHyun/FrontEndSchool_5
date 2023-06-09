@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { appAuth } from "../firebase/config";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useAuthContext } from "./useAuthContext";
 
 // 회원가입을 진행하는 훅
-export const useSignup = () => {
+export const useLogin = () => {
     // 에러 정보를 저장합니다.
     const [error, setError] = useState(null);
     // 현재 서버와의 통신 상태를 저장합니다.
@@ -12,31 +12,23 @@ export const useSignup = () => {
 
     const { dispatch } = useAuthContext();
 
-    const signup = (email, password, displayName) => {
+    const login = (email, password) => {
         setError(null);
         setPending(true);
 
         // 회원가입이 처리되는 함수
-        createUserWithEmailAndPassword(appAuth, email, password)
+        signInWithEmailAndPassword(appAuth, email, password)
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
                 console.log(user);
-                if (!user) {
-                    throw new Error('회원 가입에 실패했습니다!');
-                }
+                dispatch({ type: 'login', payload: user });
 
-                // 회원의 별명정보를 업데이트합니다.
-                updateProfile(appAuth.currentUser, { displayName })
-                    .then(() => {
-                        setError(null);
-                        setPending(false);
-                        dispatch({ type: 'login', payload: user });
-                    }).catch((err) => {
-                        setError(err.message);
-                        setPending(false);
-                        console.log(err.message);
-                    });
+                if (!user) {
+                    throw new Error('로그인에 실패했습니다!');
+                }
+                setError(null);
+                setPending(false);
             })
             .catch((err) => {
                 setError(err.message);
@@ -44,5 +36,5 @@ export const useSignup = () => {
                 console.log(err.message);
             });
     }
-    return { error, isPending, signup }
+    return { error, isPending, login }
 }
